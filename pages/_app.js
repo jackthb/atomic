@@ -1,5 +1,5 @@
 // import App from 'next/app'
-import '../public/styles.css';
+// import '../public/styles.css';
 
 // import { config } from '@fortawesome/fontawesome-svg-core'
 // import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS
