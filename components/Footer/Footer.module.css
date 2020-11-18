@@ -15,16 +15,13 @@
     padding-bottom: 2%;
  }
 .icon{ 
-    /* padding-left: 0px; */
     padding-right: 20px;
-    font-size: 5rem;
-    color:black;
+    color:darkgray;
     opacity: 0.6;
     transition: 0.5s;
 }
 
 .icon:hover{
-    
     color: black;
     opacity: 1;
 }

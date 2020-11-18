@@ -15,7 +15,6 @@ const TempCard = () => (
             <div className={styles.text}>
                 <header><p id="name">JACK C. BURGESS</p></header>
                 <p>monk and keyboard enthusiast</p>
-                <a className={styles.contact}href="mailto:jackcburgess@gmail.com" id="email">contact me!</a>
             </div>
         </div>
     </div>
