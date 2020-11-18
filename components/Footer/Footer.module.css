@@ -1,0 +1,30 @@
+/* .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  } */
+  
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-bottom: 2%;
+ }
+.icon{ 
+    /* padding-left: 0px; */
+    padding-right: 20px;
+    font-size: 5rem;
+    color:black;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    
+    color: black;
+    opacity: 1;
+}
