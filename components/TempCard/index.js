@@ -11,6 +11,7 @@ const TempCard = () => (
             alt="Picture of the author"
             width={600}
             height={400}
+            className={styles.image}
             />
             <div className={styles.text}>
                 <header><p id="name">JACK C. BURGESS</p></header>
