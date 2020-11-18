@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Header />
         <TempCard />
-      <Footer/>
+      {/* <Footer/> */}
       </main>
     </div>
   )
