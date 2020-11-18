@@ -1,7 +1,6 @@
 body {
     font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
       'Arial', sans-serif;
-    background-color: white;
   }
 
 html,
@@ -15,4 +14,5 @@ body {
 
 * {
   box-sizing: border-box;
+  background-color: white;
 }
