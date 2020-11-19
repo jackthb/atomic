@@ -14,10 +14,9 @@ export default function Home() {
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
       </Head>
       <main>
-        {/* <Header />
-        <TempCard /> */}
-      {/* <Footer/> */}
-      hello work work work
+        <Header />
+        <TempCard />
+        <Footer/>
       </main>
     </div>
   )
