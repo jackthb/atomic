@@ -1,10 +1,4 @@
-/* .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 30px;
-  } */
-  
+
 .footer{
     position: absolute;
     left: 0;
@@ -18,7 +12,6 @@
     padding-right: 20px;
     color:darkgray;
     opacity: 0.6;
-    transition: 0.5s;
 }
 
 .icon:hover{

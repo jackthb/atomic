@@ -1,4 +1,4 @@
-// import App from 'next/app'
+import App from 'next/app'
 import '../public/styles.css';
 
 import { config } from '@fortawesome/fontawesome-svg-core'
