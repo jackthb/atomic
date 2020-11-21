@@ -14,7 +14,7 @@ const Header = () => (
         
         </div>
         <nav className={styles.nav}>
-          <Link href="/404/notFound">
+          <Link href="/about/about">
             <a className={styles.title}>
               About
             </a>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import styles from './notFound.module.css'
 
-export default function Home() {
+export default function notFound() {
 
     return (
       <div className={styles.container}>
