@@ -7,15 +7,16 @@ const TempCard = () => (
     <div className={styles.container}>
         <div className={styles.block}>
             <Image
-            src='/disppic.jpg'
+            src='/images/memoji.png'
             alt="Picture of the author"
-            width={600}
-            height={400}
+            width={250}
+            height={250}
             className={styles.image}
             />
             <div className={styles.text}>
-                <header><p id="name">JACK C. BURGESS</p></header>
-                <p>monk and keyboard enthusiast</p>
+                <p>Hi! I am Jack,<br/>
+                software developer and keyboard enthusiast from London.</p>
+                <h2></h2>
             </div>
         </div>
     </div>
