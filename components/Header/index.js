@@ -14,12 +14,12 @@ const Header = () => (
         
         </div>
         <nav className={styles.nav}>
-          <Link href="/about/about">
+          <Link href="/about">
             <a className={styles.title}>
               About
             </a>
           </Link>
-          <Link href="/404/notFound">
+          <Link href="/404">
             <a className={styles.title}>
               Contact
             </a>
