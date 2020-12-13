@@ -3,8 +3,8 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 const Header = () => (
-    <header className='text-3xl'>
-      <div className={styles.header}>
+    <header className='text-3xl elements'>
+      <div className={`${styles.header}`}>
       <div>
         <Link href="/">
           <a className={styles.title}>
@@ -13,16 +13,14 @@ const Header = () => (
         </Link>
       </div>
       <nav className={styles.nav}>
-        <Link href="/404/notFound">
+        <Link href="/about">
           <a className={styles.title}>
             About
           </a>
         </Link>
-        <Link href="/404/notFound">
-          <a className={styles.title}>
-            Contact
-          </a>
-        </Link>
+        <a href='mailto:jackcburgess@gmail.com' className={styles.title}>
+          Contact
+        </a>
       </nav>
     </div>
   </header>

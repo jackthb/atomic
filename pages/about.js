@@ -1,11 +1,9 @@
 import Head from 'next/head'
 
-
 import Header from '../components/Header'
-import TempCard from '../components/TempCard'
 import Footer from '../components/Footer'
 
-export default function Home() {
+export default function About() {
 
   return (
     <div className="">
@@ -15,8 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <TempCard />
-        <Footer />
+        <Footer/>
       </main>
     </div>
   )

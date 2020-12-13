@@ -12,6 +12,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 0 20px;
+    animation-delay: 100ms;
   }
 
 .nav a + a {
