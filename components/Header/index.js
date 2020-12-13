@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 const Header = () => (
-    <header>
+    <header className='text-3xl'>
       <div className={styles.header}>
       <div>
         <Link href="/">
@@ -11,22 +11,21 @@ const Header = () => (
             JACK BURGESS
           </a>
         </Link>
-        
-        </div>
-        <nav className={styles.nav}>
-          <Link href="/404/notFound">
-            <a className={styles.title}>
-              About
-            </a>
-          </Link>
-          <Link href="/404/notFound">
-            <a className={styles.title}>
-              Contact
-            </a>
-          </Link>
-        </nav>
       </div>
-    </header>
-  )
+      <nav className={styles.nav}>
+        <Link href="/404/notFound">
+          <a className={styles.title}>
+            About
+          </a>
+        </Link>
+        <Link href="/404/notFound">
+          <a className={styles.title}>
+            Contact
+          </a>
+        </Link>
+      </nav>
+    </div>
+  </header>
+)
 
 export default Header;

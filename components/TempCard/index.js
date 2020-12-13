@@ -14,8 +14,8 @@ const TempCard = () => (
             className={styles.image}
             />
             <div className={styles.text}>
-                <header><p id="name">JACK C. BURGESS</p></header>
-                <p>monk and keyboard enthusiast</p>
+                <h1 className='text-4xl' id="name">JACK C. BURGESS</h1>
+                <p className='pt-20'>monk and keyboard enthusiast</p>
             </div>
         </div>
     </div>
