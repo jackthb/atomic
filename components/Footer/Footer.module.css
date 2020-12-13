@@ -1,5 +1,6 @@
 
 .footer{
+    opacity: 0;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -7,7 +8,8 @@
     color: white;
     text-align: center;
     padding-bottom: 2%;
-    animation-delay: 300ms;
+    animation: fadeup 1.2s ease-in-out forwards;
+    animation-delay: 1.5s;
  }
 .icon{ 
     padding-right: 20px;
@@ -18,3 +20,14 @@
     color: black;
     opacity: 1;
 }
+
+@keyframes fadeup{
+    0%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
