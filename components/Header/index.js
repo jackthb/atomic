@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 const Header = () => (
-    <header className='text-3xl elements'>
+    <header className='text-xl onLoad'>
       <div className={`${styles.header}`}>
       <div>
         <Link href="/">

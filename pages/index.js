@@ -1,22 +1,25 @@
 import Head from 'next/head'
 
-
-import Header from '../components/Header'
 import TempCard from '../components/TempCard'
-import Footer from '../components/Footer'
 
 export default function Home() {
 
+
+  
+  React.useEffect(() => {
+    const footer = document.querySelector('.onLoadBlock')
+    console.log(footer)
+    // footer.style.animation="none";
+  }, [])
+
   return (
-    <div className="">
+    <div>
       <Head>
         <title>Jack Burgess</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
       </Head>
       <main>
-        <Header />
         <TempCard />
-        <Footer />
       </main>
     </div>
   )

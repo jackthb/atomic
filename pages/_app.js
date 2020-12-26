@@ -1,13 +1,26 @@
-import App from 'next/app'
+
 import '../public/styles.css';
+import Layout from '../components/layout'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 
-function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+
+import React from 'react'
+import App from 'next/app'
+
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <Layout>
+        <Component {...pageProps}></Component>
+      </Layout>
+    )
   }
-  
+}
+
 export default MyApp
