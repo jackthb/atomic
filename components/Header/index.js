@@ -24,6 +24,11 @@ const Header = () => (
               About
             </a>
           </Link>
+          <Link href="/404">
+            <a className={styles.title}>
+              Contact
+            </a>
+          </Link>
         </nav>
         
           <a href="https://www.linkedin.com/in/jackcburgess/"><FontAwesomeIcon className={styles.li, styles.icon} icon={faLinkedin} size='5x'/></a>
