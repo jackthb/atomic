@@ -9,7 +9,7 @@ export default function About() {
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     </Head>
       <main>
-        <article className='p-5 mx-auto'>
+        <article className='p-5 mx-96'>
             <section className='text-2xl'>
                 <h1 className='text-5xl pb-5 text-center'>About me</h1>
                 <p className='pb-3'>

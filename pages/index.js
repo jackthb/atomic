@@ -8,7 +8,6 @@ export default function Home() {
   
   React.useEffect(() => {
     const footer = document.querySelector('.onLoadBlock')
-    console.log(footer)
     // footer.style.animation="none";
   }, [])
 

@@ -12,7 +12,7 @@ import styles from './TempCard.module.css'
 
 const TempCard = () => (
     <div className={styles.container}>
-        <div className={`${styles.block} onLoadBlock`}>
+        <div className={`${styles.block} onLoadBlock rounded-md`}>
             <Image
             src='/disppic.jpg'
             alt="Picture of the author"
