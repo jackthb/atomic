@@ -4,10 +4,8 @@ import TempCard from '../components/TempCard'
 
 export default function Home() {
 
-
-  
   React.useEffect(() => {
-    const footer = document.querySelector('.onLoadBlock')
+    // const footer = document.querySelector('.onLoadBlock')
     // footer.style.animation="none";
   }, [])
 

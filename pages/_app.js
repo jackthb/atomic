@@ -1,5 +1,8 @@
 
 import '../public/styles.css';
+import "react-notion/src/styles.css";
+
+
 import Layout from '../components/layout'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -24,3 +27,4 @@ class MyApp extends App {
 }
 
 export default MyApp
+

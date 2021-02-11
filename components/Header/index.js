@@ -18,6 +18,11 @@ const Header = () => (
             About
           </a>
         </Link>
+        <Link href="/blog">
+          <a className={styles.title}>
+            Blog
+          </a>
+        </Link>
         <a href='mailto:jackcburgess@gmail.com' className={styles.title}>
           Contact
         </a>
