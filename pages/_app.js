@@ -1,30 +1,25 @@
-
 import '../public/styles.css';
-import "react-notion/src/styles.css";
+import 'react-notion/src/styles.css';
 
+import React from 'react';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import Head from 'next/head';
 
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 
-
-import React from 'react'
-import App from 'next/app'
-
-
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
-    return (
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <title>Jack Burgess</title>
+      </Head>
       <Layout>
-        <Component {...pageProps}></Component>
+        <Component {...pageProps} />
       </Layout>
-    )
-  }
+    </>
+  );
 }
-
-export default MyApp
-
