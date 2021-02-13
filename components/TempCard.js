@@ -4,13 +4,11 @@
 //     footer.classList.remove("onLoadFoot");
 //   }, [])
 
-// import { FaAngleDoubleRight } from '@fortawesome/fontawesome-common-types';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from 'next/link';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const BlinkStyle = styled.span`
   transform: scaleY(5);
@@ -21,14 +19,20 @@ const BlinkStyle = styled.span`
     }
   }
 `;
+
 export default function TempCard() {
   return (
     <div className='m-40'>
-      <h3 className='text-3xl'>Hi, I'm</h3>
-      <h1 className='text-7xl'>Jack Burgess</h1>
+      <Head>
+        <title>Home - Jack Burgess</title>
+      </Head>
+      <div className='font-display'>
+        <h3 className='text-5xl'>Hi, I'm</h3>
+        <h1 className='text-9xl'>Jack Burgess</h1>
+      </div>
       <p className='text-4xl py-32'>
-        <Link href='/about'>
-          <a>
+        <Link className='about' href='/about'>
+          <a className='font-mono'>
             <FaAngleDoubleRight className='inline' /> software developer and
             keyboard enthusiast<BlinkStyle>_</BlinkStyle>
           </a>

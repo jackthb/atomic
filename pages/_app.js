@@ -14,9 +14,6 @@ config.autoAddCss = false;
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>Jack Burgess</title>
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

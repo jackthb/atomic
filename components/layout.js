@@ -5,7 +5,7 @@ import Footer from '../components/Footer.js';
 
 export default function Layout({ children }) {
   return (
-    <div className='layout'>
+    <div>
       <Header />
       {children}
       <Footer />

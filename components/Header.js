@@ -1,29 +1,37 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
-const Header = () => (
-  <header className=''>
-    <div className='py-0 px-8 text-xl onLoad max-w-full m-auto h-28 flex items-center'>
-      <div className='title'>
-        <Link className='' href='/'>
-          JACK BURGESS
-        </Link>
-      </div>
-      <nav className='block ml-auto'>
-        <Link href='/about'>
-          <a className='title mr-4'>About</a>
-        </Link>
-        {/* <Link href="/blog">
+export default function Header() {
+  const router = useRouter();
+
+  return (
+    <header>
+      <div className='py-0 px-5 text-xl onLoad max-w-full m-auto h-28 flex items-center font-display'>
+        <div className={`${router.pathname == '/' ? 'active' : ''} title`}>
+          <Link className='' href='/'>
+            JACK BURGESS
+          </Link>
+        </div>
+        <nav className='block ml-auto'>
+          <Link href='/about'>
+            <a
+              className={`${
+                router.pathname == '/about' ? 'about' : ''
+              } title mr-4`}
+            >
+              About
+            </a>
+          </Link>
+          {/* <Link href="/blog">
           <a className=styles.title>
             Blog
           </a>
         </Link> */}
-        <a href='mailto:jackcburgess@gmail.com' className='title'>
-          Contact
-        </a>
-      </nav>
-    </div>
-  </header>
-);
-
-export default Header;
+          <a href='mailto:jackcburgess@gmail.com' className='title'>
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}
