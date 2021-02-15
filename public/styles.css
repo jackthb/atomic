@@ -65,7 +65,6 @@
   -ms-animation: fadein 1s;
   -o-animation: fadein 1s;
   animation: fadein 1s forwards;
-  animation-delay: 1s;
 }
 
 @keyframes fadein {
