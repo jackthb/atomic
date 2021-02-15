@@ -7,7 +7,7 @@ export default function About() {
         <title>About - Jack Burgess</title>
         <link rel='icon' type='image/x-icon' href='/images/favicon.ico' />
       </Head>
-      <article className='p-5 md:mx-40 mx-20 text-2xl'>
+      <article className='p-5 md:mx-40 sm:mx-20 text-2xl'>
         <h1 className='text-5xl pb-9 text-center'>About me</h1>
         <p className='pb-9'>
           I'm a London-based software developer, currently in my final year of
