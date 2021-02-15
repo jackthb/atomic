@@ -1,6 +1,6 @@
 import { NotionRenderer } from 'react-notion';
 import styled from 'styled-components';
-import { getAllPosts } from '../../components/NotionFunctions.js';
+import { getAllPosts } from '.';
 
 const BlogStyle = styled.div`
   margin: 4em;
