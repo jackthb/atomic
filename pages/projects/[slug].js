@@ -15,6 +15,7 @@ export async function getStaticProps({ params: { slug } }) {
       blocks,
       post,
     },
+    revalidate: 60,
   };
 }
 
