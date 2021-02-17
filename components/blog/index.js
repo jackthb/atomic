@@ -23,7 +23,7 @@ function HomePage({ posts }) {
       {posts.map((post) => (
         <Link key={post.slug} href='/blog/[slug]' as={`/blog/${post.slug}`}>
           <div>
-            {post.title} - {post.slug}
+            {post.title} - {post.slug} - {post.date}
           </div>
         </Link>
       ))}
