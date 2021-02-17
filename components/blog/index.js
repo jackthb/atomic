@@ -22,11 +22,13 @@ function HomePage({ posts }) {
     <div>
       {posts.map((post) => (
         <Link key={post.slug} href='/blog/[slug]' as={`/blog/${post.slug}`}>
-          <div>{post.title}</div>
+          <div>
+            {post.title} - {post.slug} - {post.date}
+          </div>
         </Link>
       ))}
     </div>
   );
 }
 
-// export default HomePage;
+export default HomePage;

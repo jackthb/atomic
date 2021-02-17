@@ -48,7 +48,9 @@
     transform: scaleX(1);
   }
 }
-.about::before {
+.about::before,
+.projects::before,
+.blog::before {
   visibility: visible;
   transform: scaleX(1);
 }

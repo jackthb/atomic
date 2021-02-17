@@ -1,5 +1,11 @@
 import { NotionRenderer } from 'react-notion';
-import { getAllPosts } from './';
+import styled from 'styled-components';
+import { getAllPosts } from '.';
+
+const BlogStyle = styled.div`
+  margin: 4em;
+  max-width: 768;
+`;
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -19,12 +25,12 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const getPost = ({ post, blocks }) => (
-  <div style={{ maxWidth: 768 }}>
+  <BlogStyle>
     <h1>{post.title}</h1>
     <NotionRenderer blockMap={blocks} />
-  </div>
+  </BlogStyle>
 );
-// export default getPost;
+export default getPost;
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();

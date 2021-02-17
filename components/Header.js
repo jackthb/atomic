@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className='py-0 px-5 text-xl onLoad max-w-full m-auto h-28 flex items-center font-display'>
+      <div className='py-0 px-5 sm:text-xl onLoad max-w-full m-auto h-28 flex items-center font-display'>
         <div className={`${router.pathname == '/' ? 'active' : ''} title`}>
           <Link className='' href='/'>
             JACK BURGESS
@@ -22,11 +22,24 @@ export default function Header() {
               About
             </a>
           </Link>
-          {/* <Link href="/blog">
-          <a className=styles.title>
-            Blog
-          </a>
-        </Link> */}
+          <Link href='/projects'>
+            <a
+              className={`${
+                router.pathname == '/projects' ? 'projects' : ''
+              } title mr-4`}
+            >
+              Projects
+            </a>
+          </Link>
+          {/* <Link href='/blog'>
+            <a
+              className={`${
+                router.pathname == '/blog' ? 'blog' : ''
+              } title mr-4`}
+            >
+              Blog
+            </a>
+          </Link> */}
           <a href='mailto:jackcburgess@gmail.com' className='title'>
             Contact
           </a>
