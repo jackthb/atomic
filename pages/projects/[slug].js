@@ -7,7 +7,7 @@ export async function getStaticProps({ params: { slug } }) {
   // Find the current blogpost by slug
   const post = posts.find((t) => t.slug === slug);
   const blocks = await fetch(
-    `https://notion-api.splitbee.io/v1/page/${post.id}`
+    `https://notion-worker.jackcburgess.workers.dev/v1/page/${post.id}`
   ).then((res) => res.json());
 
   return {
