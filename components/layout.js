@@ -6,8 +6,10 @@ import Footer from './Footer.js';
 export default function Layout({ children }) {
   return (
     <div>
-      <Header />
-      {children}
+      <div className='wrapper'>
+        <Header />
+        {children}
+      </div>
       <Footer />
     </div>
   );
