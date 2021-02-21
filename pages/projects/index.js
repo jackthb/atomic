@@ -1,14 +1,12 @@
 import Link from 'next/link';
-
 const NOTION_BLOG_ID =
   '7520df31ba244264ab074da9129a0fc5' || process.env.NOTION_BLOG_ID;
 
 export const getAllPosts = async () => {
   return await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
+    `https://notion-worker.jackcburgess.workers.dev/v1/table/${NOTION_BLOG_ID}`
   ).then((res) => res.json());
 };
-
 export async function getStaticProps() {
   const posts = await getAllPosts();
   return {
@@ -29,9 +27,14 @@ function HomePage({ posts }) {
             href='/projects/[slug]'
             as={`/projects/${post.slug}`}
           >
-            <a className=''>
-              <h1 className='md:text-4xl bg-gray-300 text-center py-5 title rounded-t-lg duration-1000'>
+            <a className='items-center flex flex-col '>
+              <h1 className=' md:text-4xl w-full bg-gray-300 text-center title rounded-t-lg duration-1000 flex flex-wrap flex-col'>
                 {post.title}
+                <img
+                  className='h-60 border-yellow-400 rounded-t-xl border-2'
+                  src={post.imageURL}
+                  style={{ objectFit: 'cover' }}
+                />
               </h1>
             </a>
           </Link>

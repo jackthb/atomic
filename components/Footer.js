@@ -1,7 +1,7 @@
 import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => (
-  <footer className='flex h-20 pt-4 pl-4 justify-around onLoadFoot text-5xl'>
+  <footer className='flex justify-around onLoadFoot text-9xl'>
     <a href='https://www.linkedin.com/in/jackcburgess/'>
       <FaLinkedinIn className='icon' />
     </a>

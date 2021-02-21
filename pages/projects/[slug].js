@@ -1,5 +1,6 @@
 import { NotionRenderer } from 'react-notion';
 import { getAllPosts } from '.';
+import DefaultErrorPage from 'next/error';
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -9,7 +10,6 @@ export async function getStaticProps({ params: { slug } }) {
   const blocks = await fetch(
     `https://notion-worker.jackcburgess.workers.dev/v1/page/${post.id}`
   ).then((res) => res.json());
-
   return {
     props: {
       blocks,
@@ -20,7 +20,9 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const getPost = ({ post, blocks }) => {
-  if (!post) return null;
+  if (!post) {
+    return <DefaultErrorPage statusCode={404} />;
+  }
   return (
     <div className='max-w-3xl p-8 mx-auto text-justify'>
       <h1 className='font-display text-6xl'>{post.title}</h1>
