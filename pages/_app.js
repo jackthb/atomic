@@ -5,7 +5,6 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-import 'nprogress/nprogress.css';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 

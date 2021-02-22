@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import DefaultErrorPage from 'next/error';
+
 const NOTION_BLOG_ID =
   '7520df31ba244264ab074da9129a0fc5' || process.env.NOTION_BLOG_ID;
 
@@ -16,7 +18,7 @@ export async function getStaticProps() {
   };
 }
 
-function HomePage({ posts }) {
+export default function HomePage({ posts }) {
   return (
     <div className='p-4 '>
       <h1 className='font-display text-7xl'>My Projects</h1>
@@ -43,5 +45,3 @@ function HomePage({ posts }) {
     </div>
   );
 }
-
-export default HomePage;
