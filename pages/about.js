@@ -5,6 +5,10 @@ export default function About() {
     <div>
       <Head>
         <title>About - Jack Burgess</title>
+        <meta
+          name='description'
+          content='London-based software developer and CompSci undergrad'
+        />
       </Head>
       <article className='p-5 md:mx-40 sm:mx-20 text-2xl'>
         <h1 className='text-5xl pb-9 text-center'>About me</h1>
