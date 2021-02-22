@@ -16,7 +16,7 @@ export default function Home() {
       cursorChar: '_',
     };
 
-    // var typed = new Typed('.element', options);
+    var typed = new Typed('.element', options);
   }
 
   return (
