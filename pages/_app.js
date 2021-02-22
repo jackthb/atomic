@@ -1,4 +1,5 @@
 import '../public/styles.css';
+import '../public/nprogress.css';
 import 'react-notion/src/styles.css';
 
 import React from 'react';
