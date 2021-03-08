@@ -33,9 +33,9 @@ export default function HomePage({ posts }) {
               <h1 className=' md:text-4xl w-full bg-gray-300 text-center title rounded-t-lg duration-1000 flex flex-wrap flex-col'>
                 {post.title}
                 <img
-                  className='h-60 border-yellow-400 rounded-t-xl border-2'
+                  className='h-60 border-yellow-400 rounded-t-xl border-2 object-cover'
                   src={post.imageURL}
-                  style={{ objectFit: 'cover' }}
+                  // style={{ objectFit: 'cover' }}
                 />
               </h1>
             </a>
