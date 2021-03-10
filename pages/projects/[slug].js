@@ -26,17 +26,17 @@ const getPost = ({ post, blocks }) => {
   return (
     <div className='max-w-3xl p-8 mx-auto text-justify'>
       <h1 className='font-display text-6xl'>{post.title}</h1>
-      <h2 className=''>{dateFormat(post.date)}</h2>
       {/* AUTHOR */}
-      <div className='flex items-center justify-center'>
-        <h3>
-          By <strong>{post.author[0].fullName}</strong>
-        </h3>
+      <div className='flex items-center'>
         <img
           className='w-14 h-14'
           src={post.author[0].profilePhoto}
           style={{ clipPath: 'circle(30%)' }}
         />
+        <h3>
+          By <strong>{post.author[0].fullName}</strong>
+        </h3>
+        <h2 className='pl-2'>{dateFormat(post.date)}</h2>
       </div>
       <NotionRenderer blockMap={blocks} />
     </div>
