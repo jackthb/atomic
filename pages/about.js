@@ -16,7 +16,8 @@ export default function About() {
           I'm a London-based software developer, currently in my final year of
           undergraduate Computer Science at Queen Mary University of London. In
           my free time I am always looking to push myself, and love building
-          functional software and collaborating with others.
+          functional software and collaborating with others. 
+          Learning has consumed a huge portion of my life, and I have no intention of stopping now.
         </p>
         <p className='pb-9'>
           At university, I'm working on my final year project, Artificial
@@ -24,7 +25,7 @@ export default function About() {
           Networks.
         </p>
         <p className='pb-9'>
-          Away from my desk, you may find me at the gym, reading books on
+          Away from my desk, you may find me at the gym, <a className='hover:bg-yellow-400 transition rounded ' href='https://www.goodreads.com/user/show/55118887-jack-burgess'>reading books</a> on
           Psychology and self-help, and/or going for ridiculously long walks.
         </p>
       </article>
