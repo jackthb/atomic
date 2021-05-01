@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <div className='onLoadBlock grid pt-14 px-10 place-items-center md:grid-cols-3 sm:grid-cols-3'>
+    <div className='onLoadBlock grid pt-14 px-20 place-items-center md:grid-cols-3 sm:grid-cols-3'>
       <Head>
         <title>Jack Burgess</title>
         <meta
