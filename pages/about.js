@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Book from '../components/Book';
+import { fetchGoodReads } from './api/book';
 
-export default function About({}) {
+export default function About({ title, author }) {
   return (
     <div>
       <Head>
@@ -38,24 +39,26 @@ export default function About({}) {
           walks.
         </p>
       </article>
-      {/* <div className='container mb-4'>
-        <Book />
-      </div> */}
+      <Book title={title} author={author} />
     </div>
   );
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`https://.../data`);
-  const data = await res.json();
+  const { data, err } = await fetchGoodReads();
 
-  if (!data) {
+  if (err) {
     return {
-      notFound: true,
+      props: {
+        err,
+      },
     };
   }
 
   return {
-    props: { data }, // will be passed to the page component as props
+    props: {
+      title: data.title,
+      author: data.author,
+    },
   };
 }
