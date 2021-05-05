@@ -9,7 +9,7 @@ const ImageComponent = ({ src, loading = 'lazy' }) => {
     <Image
       class='w-full h-full'
       src={`${hostUrl}/portfolio/${src}`}
-      alt='Picture of the author'
+      alt='Picture of the item in portfolio'
       unsized
       layout='responsive'
       quality={10}
