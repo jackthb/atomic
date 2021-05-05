@@ -31,3 +31,18 @@ export default function About() {
     </div>
   );
 }
+
+export async function getStaticProps(context) {
+  const res = await fetch(`https://.../data`);
+  const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { data }, // will be passed to the page component as props
+  };
+}
