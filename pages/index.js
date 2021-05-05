@@ -3,7 +3,9 @@ import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import Head from 'next/head';
 import Typed from 'typed.js';
+
 import { useEffect, useState } from 'react';
+
 export default function Home() {
   const [isCompMounted, setCompMonuted] = useState(false);
 
