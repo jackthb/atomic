@@ -5,8 +5,9 @@ export const fetchGoodReads = async () => {
     const user = '55118887-jack-burgess';
     const response = await fetch(`https://www.goodreads.com/user/show/${user}`);
     const $ = cheerio.load(await response.text());
-    const data = $(`a[class='bookTitle']`).text();
-    return { data, err: null };
+    const title = $(`a[class='bookTitle']`).text();
+    const author = $(`a[class='authorName']`).text();
+    return { data: { title, author }, err: null };
   } catch (err) {
     return { data: null, err: err.message };
   }
