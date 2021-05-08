@@ -1,6 +1,7 @@
 import { NotionRenderer } from 'react-notion';
 import { getAllPosts } from '.';
 import DefaultErrorPage from 'next/error';
+import Head from 'next/head';
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -25,6 +26,13 @@ const getPost = ({ post, blocks }) => {
   }
   return (
     <div className='max-w-3xl p-8 mx-auto text-justify'>
+      <Head>
+        <title>{post.title}</title>
+        <meta
+          name='description'
+          content='London-based software developer and CompSci undergrad'
+        />
+      </Head>
       <h1 className='font-display text-6xl'>{post.title}</h1>
       {/* AUTHOR */}
       <div className='flex items-center'>
