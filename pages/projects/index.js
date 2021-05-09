@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import DefaultErrorPage from 'next/error';
+import Head from 'next/head';
 
 const NOTION_BLOG_ID =
   '7520df31ba244264ab074da9129a0fc5' || process.env.NOTION_BLOG_ID;
@@ -21,6 +21,13 @@ export async function getStaticProps() {
 export default function HomePage({ posts }) {
   return (
     <div className='p-4 '>
+      <Head>
+        <title>Projects - Jack Burgess</title>
+        <meta
+          name='description'
+          content='London-based software developer and CompSci undergrad'
+        />
+      </Head>
       <h1 className='font-display text-7xl'>My Projects</h1>
       <div className='grid grid-cols-2 py-4 gap-4 '>
         {posts.map((post) => (
@@ -33,9 +40,8 @@ export default function HomePage({ posts }) {
               <h1 className=' md:text-4xl w-full bg-gray-300 text-center title rounded-t-lg duration-1000 flex flex-wrap flex-col'>
                 {post.title}
                 <img
-                  className='h-60 border-yellow-400 rounded-t-xl border-2 object-cover'
+                  className='h-60 rounded-t-xl border-2 object-cover'
                   src={post.imageURL}
-                  // style={{ objectFit: 'cover' }}
                 />
               </h1>
             </a>
