@@ -7,7 +7,8 @@ export const fetchGoodReads = async () => {
     const $ = cheerio.load(await response.text());
     const title = $(`a[class='bookTitle']`).text();
     const author = $(`a[class='authorName']`).text();
-    return { data: { title, author }, err: null };
+    const image = $(`div.firstcol img`).attr('src').replace('._SX98_.', '.');
+    return { data: { title, author, image }, err: null };
   } catch (err) {
     return { data: null, err: err.message };
   }
