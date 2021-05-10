@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
-
-export default function Book({ title, author }) {
+export default function Book({ book }) {
+  const { title, author, image } = book;
   return (
-    <h1 className='text-2xl font-bold mx-12 rounded border-1 border-t-4 border-b-4 border- border-yellow-500 p-4'>
-      I am currently reading {title} by {author}!
-    </h1>
+    <div className="max-w-lg mx-auto flex rounded border-1 border-t-4 border-b-4 border-yellow-500 p-4">
+      <img draggable={false} src={image} className="w-24 h-auto select-none" />
+      <div className="flex flex-col px-5">
+        <h1 className="text-1xl">Currently reading</h1>
+        <h2 className="text-2xl font-bold">{title}</h2>
+        <span className=""> by {author}</span>
+      </div>
+    </div>
   );
 }
