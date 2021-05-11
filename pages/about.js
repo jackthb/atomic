@@ -13,7 +13,7 @@ export default function About({ book }) {
         />
       </Head>
       <article className="max-w-5xl mx-auto p-5 text-2xl">
-        <h1 className="text-5xl pb-9 text-center">About me</h1>
+        <h1 className="text-5xl pb-9 text-center font-display">About me</h1>
         <p className="pb-9">
           I'm a London-based software developer, currently in my final year of
           undergraduate Computer Science at Queen Mary University of London. In
