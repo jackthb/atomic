@@ -6,7 +6,6 @@ import {
 } from "react-icons/fa";
 
 import Typing from "../components/Typing";
-import Canvas from "../components/Canvas";
 
 import Head from "next/head";
 import Link from "next/link";
