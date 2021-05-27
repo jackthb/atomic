@@ -1,11 +1,5 @@
 import { NotionRenderer } from 'react-notion';
-import styled from 'styled-components';
 import { getAllPosts } from '.';
-
-const BlogStyle = styled.div`
-  margin: 4em;
-  max-width: 768;
-`;
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -25,10 +19,10 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const getPost = ({ post, blocks }) => (
-  <BlogStyle>
+  <div className='m-16 max-w-3xl'>
     <h1>{post.title}</h1>
     <NotionRenderer blockMap={blocks} />
-  </BlogStyle>
+  </div>
 );
 export default getPost;
 
