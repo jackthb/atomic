@@ -25,14 +25,16 @@ export default function Home() {
 				<h1 className="text-6xl font-display gradientText my-auto pb-2">
 					Hello, I'm Jack Burgess
 				</h1>
-				<p className="text-3xl font-mono">
-					<FaAngleDoubleRight className="inline mr-3" />
-					keyboard enthusiast + productivity nerd
-				</p>
-				<p className="text-3xl font-mono h-10">
-					<FaAngleDoubleRight className="inline mr-3" />
-					<Typing text={"Software developer and CompSci undergrad"} />
-				</p>
+				<div className="sm:text-3xl text-xl font-mono">
+					<p>
+						<FaAngleDoubleRight className="inline mr-3" />
+						keyboard enthusiast + productivity nerd
+					</p>
+					<p className="h-10">
+						<FaAngleDoubleRight className="inline mr-3" />
+						<Typing text={"Software developer and CompSci undergrad"} />
+					</p>
+				</div>
 			</div>
 			<a href="https://www.linkedin.com/in/jackcburgess/" alt="LinkedIn link">
 				<FaLinkedinIn className="icon" />
