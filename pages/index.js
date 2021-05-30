@@ -5,10 +5,12 @@ import {
 	FaAngleDoubleRight,
 } from "react-icons/fa";
 
+import {Canvas, draw} from '../components/Canvas'
 import Typing from "../components/Typing";
 
 import Head from "next/head";
 import Link from "next/link";
+
 
 export default function Home() {
 	return (
@@ -20,7 +22,7 @@ export default function Home() {
 					content="London-based software developer and CompSci undergrad"
 				/>
 			</Head>
-			<div className="col-span-3">
+			<div className="col-span-3 md:p-0 p-4">
 				{/* <Canvas draw={draw} /> */}
 				<h1 className="text-6xl font-display gradientText my-auto pb-2">
 					Hello, I'm Jack Burgess
