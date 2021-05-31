@@ -27,13 +27,13 @@ export default function Home() {
 				<h1 className="text-6xl font-display gradientText my-auto pb-2">
 					Hello, I'm Jack Burgess
 				</h1>
-				<div className="sm:text-3xl text-xl font-mono">
+				<div>
 					<p>
-						<FaAngleDoubleRight className="inline mr-3" />
+						<FaAngleDoubleRight className="inline mr-3 sm:text-3xl text-xl font-mono" />
 						keyboard enthusiast + productivity nerd
 					</p>
 					<p className="h-10">
-						<FaAngleDoubleRight className="inline mr-3" />
+						<FaAngleDoubleRight className="inline mr-3 sm:text-3xl text-xl font-mono" />
 						<Typing text={"Software developer and CompSci undergrad"} />
 					</p>
 				</div>
