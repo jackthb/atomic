@@ -28,12 +28,12 @@ export default function Home() {
 					Hello, I'm Jack Burgess
 				</h1>
 				<div>
-					<p>
-						<FaAngleDoubleRight className="inline mr-3 sm:text-3xl text-xl font-mono" />
+					<p className="sm:text-3xl text-xl font-mono">
+						<FaAngleDoubleRight className="inline mr-3" />
 						keyboard enthusiast + productivity nerd
 					</p>
-					<p className="h-10">
-						<FaAngleDoubleRight className="inline mr-3 sm:text-3xl text-xl font-mono" />
+					<p className="h-10 sm:text-3xl text-xl font-mono">
+						<FaAngleDoubleRight className="inline mr-3" />
 						<Typing text={"Software developer and CompSci undergrad"} />
 					</p>
 				</div>
