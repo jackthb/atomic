@@ -3,10 +3,16 @@ import React, { Component } from "react";
 import Header from "./Header.js";
 
 export default function Layout({ children }) {
-	return (
-		<div className="h-screen flex flex-col">
-			<Header />
-			{children}
-		</div>
-	);
+  return (
+    <div className="h-screen flex flex-col">
+      <Head>
+        <meta
+          name="description"
+          content="London-based software developer and CompSci undergrad"
+        />
+      </Head>
+      <Header />
+      {children}
+    </div>
+  );
 }
