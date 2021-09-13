@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -8,9 +8,13 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>
+      <Html lang="en">
         <Head>
-          <link rel='icon' type='image/x-icon' href='/images/favicon.ico' />
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+          <meta
+            name="og:image"
+            content="https://res.cloudinary.com/du2zxsy39/image/upload/v1631560504/site_voffuw.png"
+          />
         </Head>
         <body>
           <Main />
