@@ -8,7 +8,7 @@ import path from "path";
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join("./projects", slug + ".md"),
+    path.join("./blog", slug + ".md"),
     "utf8"
   );
 
@@ -20,11 +20,10 @@ export async function getStaticProps({ params: { slug } }) {
       slug,
       content,
     },
-    revalidate: 1,
   };
 }
 
-export default function Project({ frontmatter: { title, date }, content }) {
+export default function Post({ frontmatter: { title, date }, content }) {
   if (!content) {
     return <DefaultErrorPage statusCode={404} />;
   }
@@ -42,7 +41,6 @@ export default function Project({ frontmatter: { title, date }, content }) {
       <div className="flex items-center">
         <h2>{date}</h2>
       </div>
-
       <div
         dangerouslySetInnerHTML={{
           __html: marked(content),
@@ -53,7 +51,7 @@ export default function Project({ frontmatter: { title, date }, content }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("./projects"));
+  const files = fs.readdirSync(path.join("./blog"));
 
   const paths = files.map((file) => ({
     params: {

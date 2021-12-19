@@ -22,24 +22,24 @@ export default function Header() {
               About
             </a>
           </Link>
-          {/* <Link href="/projects">
-						<a
-							className={`${
-								router.pathname == "/projects" ? "projects" : ""
-							} title mr-4`}
-						>
-							Projects
-						</a>
-					</Link> */}
-          {/* <Link href='/blog'>
+          <Link href="/projects">
             <a
               className={`${
-                router.pathname == '/blog' ? 'blog' : ''
+                router.pathname == "/projects" ? "projects" : ""
+              } title mr-4`}
+            >
+              Projects
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a
+              className={`${
+                router.pathname == "/blog" ? "blog" : ""
               } title mr-4`}
             >
               Blog
             </a>
-          </Link> */}
+          </Link>
           <a href="mailto:jackcburgess@gmail.com" className="title">
             Contact
           </a>

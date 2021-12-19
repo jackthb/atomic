@@ -2,12 +2,11 @@ module.exports = {
   corePlugins: {
     maxWidth: true,
   },
-  purge: ["./pages/**/*.js", "./components/**/*.js"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./pages/**/*.js", "./components/**/*.js"],
   theme: {
     fontFamily: {
-      display: ["Zen Old Mincho", "Montserrat"],
-      sans: ["Lato", "sans-serif"],
+      display: ["Libre Baskerville, serif"],
+      sans: ["Nunito", "sans-serif"],
       mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     },
     extend: {

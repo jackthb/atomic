@@ -17,7 +17,7 @@ export default function About({ book }) {
           About me
         </h1>
         <p className="pb-9">
-          I'm a London-based software developer, currently in working full-time
+          I'm a London-based software developer, currently working full-time
           helping candidates find fulfilment at{" "}
           <a className="hover:text-yellow-300" href="https://www.otta.com">
             Otta.com
