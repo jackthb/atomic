@@ -2,9 +2,10 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 
 import matter from "gray-matter";
-import { marked } from "marked";
 import fs from "fs";
 import path from "path";
+
+import markdownToHtml from "../../utils/markdownToHtml";
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
@@ -14,17 +15,19 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
+  const post = await markdownToHtml(content);
+
   return {
     props: {
       frontmatter,
       slug,
-      content,
+      post,
     },
   };
 }
 
-export default function Post({ frontmatter: { title, date }, content }) {
-  if (!content) {
+export default function Post({ frontmatter: { title, date }, post }) {
+  if (!post) {
     return <DefaultErrorPage statusCode={404} />;
   }
 
@@ -37,14 +40,15 @@ export default function Post({ frontmatter: { title, date }, content }) {
           content="London-based software developer and CompSci undergrad"
         />
       </Head>
-      <h1 className="font-display text-6xl">{title}</h1>
-      <div className="flex items-center">
+      <h1 className="font-display text-6xl pb-2">{title}</h1>
+      <div className="flex items-center pb-2">
         <h2>{date}</h2>
       </div>
       <div
         dangerouslySetInnerHTML={{
-          __html: marked(content),
+          __html: post,
         }}
+        className="prose"
       ></div>
     </div>
   );

@@ -5,7 +5,7 @@ excerpt: "Second year group project"
 cover_image: "https://i.imgur.com/pTaMzmR.png"
 ---
 
-# Griffon
+## Griffon
 
 ![login screen for griffon](https://i.imgur.com/pTaMzmR.png)
 

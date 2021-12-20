@@ -2,9 +2,9 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 
 import matter from "gray-matter";
-import { marked } from "marked";
 import fs from "fs";
 import path from "path";
+import markdownToHtml from "../../utils/markdownToHtml";
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
@@ -14,18 +14,19 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
+  const project = await markdownToHtml(content);
+
   return {
     props: {
       frontmatter,
       slug,
-      content,
+      project,
     },
-    revalidate: 1,
   };
 }
 
-export default function Project({ frontmatter: { title, date }, content }) {
-  if (!content) {
+export default function Project({ frontmatter: { title, date }, project }) {
+  if (!project) {
     return <DefaultErrorPage statusCode={404} />;
   }
 
@@ -38,15 +39,16 @@ export default function Project({ frontmatter: { title, date }, content }) {
           content="London-based software developer and CompSci undergrad"
         />
       </Head>
-      <h1 className="font-display text-6xl">{title}</h1>
-      <div className="flex items-center">
+      <h1 className="font-display text-6xl pb-2">{title}</h1>
+      <div className="flex items-center pb-2">
         <h2>{date}</h2>
       </div>
 
       <div
         dangerouslySetInnerHTML={{
-          __html: marked(content),
+          __html: project,
         }}
+        className="prose prose-sm md:prose-lg lg:prose-xl"
       ></div>
     </div>
   );

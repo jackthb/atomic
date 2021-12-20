@@ -3,6 +3,7 @@ module.exports = {
     maxWidth: true,
   },
   content: ["./pages/**/*.js", "./components/**/*.js"],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     fontFamily: {
       display: ["Libre Baskerville, serif"],

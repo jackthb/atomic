@@ -5,7 +5,7 @@ excerpt: "Final year project using Twitter and Google Cloud Natural Language API
 cover_image: "https://res.cloudinary.com/du2zxsy39/image/upload/v1639924677/sentry/searchq_jkvk0t.png"
 ---
 
-# What is sentry/sa-for-twitter?
+## What is sentry/sa-for-twitter?
 
 For my third year of university, we had a 'final year project', which is a long form project or dissertation based on a topic of our choice. Mine was a Chrome extension that enabled searching recent tweets for their sentiment. 
 
