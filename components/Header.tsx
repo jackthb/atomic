@@ -8,9 +8,7 @@ export default function Header() {
     <header>
       <div className="py-0 px-5 sm:text-xl text-sm onLoad max-w-6xl m-auto h-28 flex items-center font-display">
         <div className={`${router.pathname == "/" ? "active" : ""} title`}>
-          <Link className="" href="/">
-            JACK BURGESS
-          </Link>
+          <Link href="/">JACK BURGESS</Link>
         </div>
         <nav className="block ml-auto">
           <Link href="/about">

@@ -1,10 +1,4 @@
-import { useRouter } from "next/router";
-import {
-  FaTwitter,
-  FaGithub,
-  FaLinkedinIn,
-  FaAngleDoubleRight,
-} from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Header() {
   return (
