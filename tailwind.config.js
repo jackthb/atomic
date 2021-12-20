@@ -2,8 +2,7 @@ module.exports = {
   corePlugins: {
     maxWidth: true,
   },
-  content: ["./pages/**/*.js", "./components/**/*.js"],
-  plugins: [require("@tailwindcss/typography")],
+  content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   theme: {
     fontFamily: {
       display: ["Libre Baskerville, serif"],
@@ -17,4 +16,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };
