@@ -6,7 +6,11 @@ import fs from "fs";
 import path from "path";
 import markdownToHtml from "../../utils/markdownToHtml";
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const markdownWithMeta = fs.readFileSync(
     path.join("./projects", slug + ".md"),
     "utf8"

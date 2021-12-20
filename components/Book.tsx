@@ -4,7 +4,11 @@ export interface IBookProps {
   image: string;
 }
 
-export default function Book({ book: { title, author, image } }: any) {
+export default function Book({
+  book: { title, author, image },
+}: {
+  book: IBookProps;
+}) {
   return (
     <div className="sm:max-w-lg mx-auto flex rounded border-1 border-t-4 border-b-4 border-yellow-500 p-4">
       <img

@@ -12,7 +12,6 @@ export default function Header() {
       <a href="https://www.twitter.com/jack_thb">
         <FaTwitter className="icon" />
       </a>
-      I
     </footer>
   );
 }
