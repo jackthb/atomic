@@ -25,7 +25,16 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
-export default function Project({ frontmatter: { title, date }, project }) {
+export default function Project({
+  frontmatter: { title, date },
+  project,
+}: {
+  frontmatter: {
+    title: string;
+    date: string;
+  };
+  project: string;
+}) {
   if (!project) {
     return <DefaultErrorPage statusCode={404} />;
   }

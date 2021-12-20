@@ -25,7 +25,18 @@ export async function getStaticProps() {
   };
 }
 
-export default function Blog({ posts }) {
+interface IPostProps {
+  posts: {
+    slug: string;
+    data: {
+      title: string;
+      date: string;
+      cover_image: string;
+    };
+  }[];
+}
+
+export default function Blog({ posts }: IPostProps) {
   return (
     <div className="p-5 max-w-5xl w-full mx-auto">
       <Head>

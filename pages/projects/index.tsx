@@ -27,8 +27,18 @@ export async function getStaticProps() {
     },
   };
 }
+interface IProjectProps {
+  projects: {
+    slug: string;
+    data: {
+      title: string;
+      date: string;
+      cover_image: string;
+    };
+  }[];
+}
 
-export default function Projects({ projects }) {
+export default function Projects({ projects }: IProjectProps) {
   return (
     <div className="p-5 max-w-5xl mx-auto">
       <Head>

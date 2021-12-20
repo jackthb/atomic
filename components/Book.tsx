@@ -1,5 +1,10 @@
-export default function Book({ book }) {
-  const { title, author, image } = book;
+export interface IBookProps {
+  title: string;
+  author: string;
+  image: string;
+}
+
+export default function Book({ book: { title, author, image } }: any) {
   return (
     <div className="sm:max-w-lg mx-auto flex rounded border-1 border-t-4 border-b-4 border-yellow-500 p-4">
       <img

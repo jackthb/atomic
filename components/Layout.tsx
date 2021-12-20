@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Head from "next/head";
 import Header from "./Header";
 
-export default function Layout({ children }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="h-screen flex flex-col">
       <Head>
