@@ -1,8 +1,9 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import Book from "../components/Book";
+import Book, { IBookProps } from "../components/Book";
 import { fetchGoodReads } from "./api/book";
 
-export default function About({ book }) {
+export default function About({ book }: { book: IBookProps }) {
   return (
     <div>
       <Head>
@@ -50,25 +51,17 @@ export default function About({ book }) {
   );
 }
 
-export async function getStaticProps(context) {
-  const { data, err } = await fetchGoodReads();
-
-  if (err) {
-    return {
-      props: {
-        err,
-      },
-    };
-  }
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { title, author, image } = await fetchGoodReads();
 
   return {
     props: {
       book: {
-        title: data.title,
-        author: data.author,
-        image: data.image,
+        title,
+        author,
+        image,
       },
     },
     revalidate: 120,
   };
-}
+};

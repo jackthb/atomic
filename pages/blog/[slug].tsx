@@ -7,7 +7,11 @@ import path from "path";
 
 import markdownToHtml from "../../utils/markdownToHtml";
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const markdownWithMeta = fs.readFileSync(
     path.join("./blog", slug + ".md"),
     "utf8"
@@ -26,7 +30,16 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
-export default function Post({ frontmatter: { title, date }, post }) {
+export default function Post({
+  frontmatter: { title, date },
+  post,
+}: {
+  frontmatter: {
+    title: string;
+    date: string;
+  };
+  post: string;
+}) {
   if (!post) {
     return <DefaultErrorPage statusCode={404} />;
   }
