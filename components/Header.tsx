@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <header>
@@ -41,6 +49,7 @@ export default function Header() {
           <a href="mailto:jackcburgess@gmail.com" className="title">
             Contact
           </a>
+          <button onChange={() => setTheme("light")}>dark mode</button>
         </nav>
       </div>
     </header>

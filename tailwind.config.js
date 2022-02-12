@@ -2,6 +2,7 @@ module.exports = {
   corePlugins: {
     maxWidth: true,
   },
+  darkMode: "class",
   content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   theme: {
     fontFamily: {
