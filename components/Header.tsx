@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { FaLightbulb } from "react-icons/fa";
 
 export default function Header() {
   const router = useRouter();
@@ -46,10 +47,15 @@ export default function Header() {
               Blog
             </a>
           </Link>
-          <a href="mailto:jackcburgess@gmail.com" className="title">
+          <a href="mailto:jackcburgess@gmail.com" className="title mr-4">
             Contact
           </a>
-          <button onChange={() => setTheme("light")}>dark mode</button>
+          <button
+            className="title"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <FaLightbulb />
+          </button>
         </nav>
       </div>
     </header>

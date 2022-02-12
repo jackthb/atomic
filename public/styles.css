@@ -43,11 +43,11 @@
   }
 
   .title {
-    @apply relative text-black no-underline underline-offset-1;
+    @apply relative text-black no-underline underline-offset-1 dark:text-yellow-400;
   }
 
   .title.active {
-    @apply hidden relative text-black no-underline;
+    @apply hidden relative text-black no-underline dark:text-yellow-400;
   }
 
   .title::before {
@@ -57,6 +57,7 @@
     height: 2px;
     bottom: -1px;
     left: 0;
+
     background-color: #000;
     visibility: hidden;
     transform: scaleX(0);

@@ -1,6 +1,5 @@
 import "../public/styles.css";
 import "../public/nprogress.css";
-import "react-notion/src/styles.css";
 
 import Layout from "../components/Layout";
 
@@ -15,7 +14,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <Layout>
         <Component {...pageProps} />
       </Layout>
