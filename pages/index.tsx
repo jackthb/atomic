@@ -24,7 +24,7 @@ export default function Home() {
             </p>
             <p className="h-10 sm:text-3xl text-xl font-mono">
               <FaAngleDoubleRight className="inline mr-3" />
-              <Typing text={"Software engineer and CompSci grad"} />
+              <Typing text={"software engineer and CompSci grad"} />
             </p>
           </div>
         </div>

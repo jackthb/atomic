@@ -61,7 +61,7 @@ export default function Post({
         dangerouslySetInnerHTML={{
           __html: post,
         }}
-        className="prose"
+        className="prose prose-sm md:prose-lg lg:prose-xl dark:prose-invert"
       ></div>
     </div>
   );

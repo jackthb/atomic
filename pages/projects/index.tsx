@@ -49,15 +49,15 @@ export default function Projects({ projects }: IProjectProps) {
         />
       </Head>
       <h1 className="font-display text-7xl gradientText pb-2">My Projects</h1>
-      <div className="grid grid-cols-2 py-4 gap-4 ">
+      <div className="grid grid-cols-2 py-4 gap-4">
         {projects.map((project) => (
           <Link
             key={project.slug}
             href="/projects/[slug]"
             as={`/projects/${project.slug}`}
           >
-            <a className="items-center flex flex-col ">
-              <h1 className=" md:text-4xl w-full bg-gray-300 text-center title items rounded-t-lg duration-1000 flex flex-wrap flex-col">
+            <a className="items-center flex flex-col hover:scale-105 transition-all">
+              <h1 className=" md:text-4xl w-full bg-gray-300 dark:bg-gray-700 text-center title items rounded-t-lg duration-1000 flex flex-wrap flex-col">
                 {project.data.title}
                 <img
                   className="h-60 rounded-t-xl border-2 object-cover"

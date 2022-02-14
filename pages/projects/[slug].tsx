@@ -61,7 +61,7 @@ export default function Project({
         dangerouslySetInnerHTML={{
           __html: project,
         }}
-        className="prose prose-sm md:prose-lg lg:prose-xl"
+        className="prose prose-sm md:prose-lg lg:prose-xl dark:prose-invert"
       ></div>
     </div>
   );
