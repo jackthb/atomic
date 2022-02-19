@@ -55,6 +55,7 @@ export default function Header() {
           <button
             className="title"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label="Toggle theme"
           >
             <FaLightbulb />
           </button>

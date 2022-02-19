@@ -15,6 +15,7 @@ export default function Book({
         draggable={false}
         src={image}
         className="w-24 h-auto object-cover select-none"
+        alt={`${title} by ${author} cover`}
       />
       <div className="flex flex-col px-5">
         <h1 className="text-1xl">Currently reading</h1>

@@ -38,7 +38,7 @@
   }
 
   .title {
-    @apply relative text-black underline-offset-1 dark:text-yellow-400 hover:underline;
+    @apply relative text-black underline-offset-1 dark:text-yellow-300 hover:underline;
   }
 
   .title.active {
