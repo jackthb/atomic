@@ -32,7 +32,7 @@ export default function About({ book }: { book: IBookProps }) {
           I'm also a huge fan of the bodybuilding. Away from my desk, you may
           find me at the gym (climbing or traditional),{" "}
           <a
-            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-yellow-600 to-red-600 transition duration-300 rounded "
+            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-yellow-600 to-red-600 transition duration-300 rounded"
             href="https://www.goodreads.com/user/show/55118887-jack-burgess"
           >
             reading books
@@ -41,12 +41,26 @@ export default function About({ book }: { book: IBookProps }) {
           finally self-help.
         </p>
         <p>
-          {" "}
           You can see what I'm currently reading on below - feel free to send me
           any recommendations!
         </p>
       </article>
       <Book book={book} />
+      <article className="max-w-5xl mx-auto p-5 text-2xl">
+        <div className="flex items-center flex-col">
+          <p>Last hike:</p>
+          <iframe
+            src="https://www.alltrails.com/widget/map/white-cliffs-path-dover-to-deal-507373b?u=m"
+            width="100%"
+            height="400"
+            frameBorder={0}
+            scrolling="no"
+            marginHeight={0}
+            marginWidth={0}
+            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+          />
+        </div>
+      </article>
     </div>
   );
 }
