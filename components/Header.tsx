@@ -49,7 +49,7 @@ export default function Header() {
               Blog
             </a>
           </Link>
-          <a href="mailto:jackcburgess@gmail.com" className="title mr-4">
+          <a href="mailto:hello@jackburgess.co.uk" className="title mr-4">
             Contact
           </a>
           <button

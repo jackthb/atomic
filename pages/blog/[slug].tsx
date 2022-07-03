@@ -53,7 +53,7 @@ export default function Post({
           content="London-based software developer and CompSci undergrad"
         />
       </Head>
-      <h1 className="font-display text-6xl pb-2">{title}</h1>
+      <h1 className="font-display text-5xl pb-2 text-left">{title}</h1>
       <div className="flex items-center pb-2">
         <h2>{date}</h2>
       </div>
