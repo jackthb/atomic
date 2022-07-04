@@ -8,10 +8,6 @@ export default function About({ book }: { book: IBookProps }) {
     <div>
       <Head>
         <title>About - Jack Burgess</title>
-        <meta
-          name="description"
-          content="London-based software developer and CompSci undergrad"
-        />
       </Head>
       <article className="max-w-5xl mx-auto p-5 text-2xl">
         <h1 className="text-5xl pb-9 text-center font-display gradientText">

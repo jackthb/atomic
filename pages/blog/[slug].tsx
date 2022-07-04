@@ -48,10 +48,6 @@ export default function Post({
     <div className="max-w-3xl p-8 mx-auto text-justify">
       <Head>
         <title>{title}</title>
-        <meta
-          name="description"
-          content="London-based software developer and CompSci undergrad"
-        />
       </Head>
       <h1 className="font-display text-5xl pb-2 text-left">{title}</h1>
       <div className="flex items-center pb-2">

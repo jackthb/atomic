@@ -41,10 +41,6 @@ export default function Blog({ posts }: IPostProps) {
     <div className="p-5 max-w-5xl w-full mx-auto">
       <Head>
         <title>Projects - Jack Burgess</title>
-        <meta
-          name="description"
-          content="London-based software developer and CompSci undergrad"
-        />
       </Head>
       <h1 className="font-display text-7xl gradientText pb-3 w-full">Blog</h1>
       {posts.map((post) => (

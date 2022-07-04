@@ -43,10 +43,6 @@ export default function Projects({ projects }: IProjectProps) {
     <div className="p-5 max-w-5xl mx-auto">
       <Head>
         <title>Projects - Jack Burgess</title>
-        <meta
-          name="description"
-          content="London-based software developer and CompSci undergrad"
-        />
       </Head>
       <h1 className="font-display text-7xl gradientText pb-2">My Projects</h1>
       <div className="grid grid-cols-2 py-4 gap-4">
