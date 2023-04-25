@@ -13,8 +13,6 @@ export default function Header() {
 
   if (!mounted) return null;
 
-  console.log(router.pathname, router.pathname.includes("/projects"));
-
   return (
     <header>
       <div className="py-0 px-5 sm:text-xl text-sm onLoad max-w-6xl m-auto h-28 flex items-center font-display">
@@ -22,7 +20,7 @@ export default function Header() {
           <Link href="/">Jack Burgess</Link>
         </div>
         <nav className="flex align-center ml-auto">
-          <Link href="/about">
+          <Link href="/about" legacyBehavior>
             <a
               className={`${
                 router.pathname.includes("/about") ? "selected" : ""
@@ -31,7 +29,7 @@ export default function Header() {
               About
             </a>
           </Link>
-          <Link href="/projects">
+          <Link href="/projects" legacyBehavior>
             <a
               className={`${
                 router.pathname.includes("/projects") ? "selected" : ""
@@ -40,7 +38,7 @@ export default function Header() {
               Projects
             </a>
           </Link>
-          <Link href="/blog">
+          <Link href="/blog" legacyBehavior>
             <a
               className={`${
                 router.pathname.includes("/blog") ? "selected" : ""

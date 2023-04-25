@@ -9,54 +9,31 @@ export default function About({ book }: { book: IBookProps }) {
       <Head>
         <title>About - Jack Burgess</title>
       </Head>
-      <article className="max-w-5xl mx-auto p-5 text-2xl">
+      <article className="max-w-5xl mx-auto p-5 mb-5 text-2xl">
         <h1 className="text-5xl pb-9 text-center font-display gradientText">
           About me
         </h1>
         <p className="pb-9">
           I'm a London-based software developer, currently working full-time
           helping candidates find fulfilment at{" "}
-          <a className="hover:text-yellow-300" href="https://www.otta.com">
+          <a className="transition duration-300 hover:text-yellow-500" href="https://www.otta.com">
             Otta.com
           </a>
           . I graduated with a First Class in Computer Science at Queen Mary
-          University of London. In my free time I am always looking to push
-          myself, and love building functional software and collaborating with
-          others.
-        </p>
-        <p className="pb-9">
-          I'm also a huge fan of the bodybuilding. Away from my desk, you may
-          find me at the gym (climbing or traditional),{" "}
-          <a
-            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-yellow-600 to-red-600 transition duration-300 rounded"
-            href="https://www.goodreads.com/user/show/55118887-jack-burgess"
-          >
-            reading books
-          </a>{" "}
-          about Psychology, different types of Philosophies and worldviews, and
-          finally self-help.
+          University of London. I spend most of my free time working on <a
+            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-blue-300 to-blue-600 transition duration-300"
+            href="https://www.sien.vision"
+          >sien.vision</a>.
         </p>
         <p>
-          You can see what I'm currently reading on below - feel free to send me
-          any recommendations!
+          You can see what I'm currently reading below - <a
+            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-yellow-600 to-red-600 transition duration-300 rounded"
+            href="https://www.goodreads.com/user/show/55118887-jack-burgess"
+          >feel free to send me
+          any recommendations!</a>
         </p>
       </article>
       <Book book={book} />
-      <article className="max-w-5xl mx-auto p-5 text-2xl">
-        <div className="flex items-center flex-col">
-          <p>Last hike:</p>
-          <iframe
-            src="https://www.alltrails.com/widget/map/white-cliffs-path-dover-to-deal-507373b?u=m"
-            width="100%"
-            height="400"
-            frameBorder={0}
-            scrolling="no"
-            marginHeight={0}
-            marginWidth={0}
-            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
-          />
-        </div>
-      </article>
     </div>
   );
 }

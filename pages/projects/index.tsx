@@ -51,8 +51,9 @@ export default function Projects({ projects }: IProjectProps) {
             key={project.slug}
             href="/projects/[slug]"
             as={`/projects/${project.slug}`}
+            legacyBehavior
           >
-            <a className="items-center flex flex-col hover:scale-105 transition-all">
+            <a className="items-center flex flex-col transition-all">
               <h1 className=" md:text-4xl w-full bg-gray-300 dark:bg-gray-700 text-center title items rounded-t-lg duration-1000 flex flex-wrap flex-col">
                 {project.data.title}
                 <img
