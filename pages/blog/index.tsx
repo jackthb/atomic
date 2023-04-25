@@ -42,9 +42,14 @@ export default function Blog({ posts }: IPostProps) {
       <Head>
         <title>Projects - Jack Burgess</title>
       </Head>
-      <h1 className="font-display text-7xl gradientText pb-3 w-full">Blog</h1>
+      <h1 className="text-7xl font-extrabold pb-3 w-full">Blog</h1>
       {posts.map((post) => (
-        <Link key={post.slug} href="/blog/[slug]" as={`/blog/${post.slug}`} legacyBehavior>
+        <Link
+          key={post.slug}
+          href="/blog/[slug]"
+          as={`/blog/${post.slug}`}
+          legacyBehavior
+        >
           <a className="w-full hover:underline dark:hover:bg-slate-700 rounded flex items-center justify-between border-b-2 p-4 pb-2 border-black">
             <h1 className="text-2xl">{post.data.title}</h1>
             <p>{post.data.date}</p>

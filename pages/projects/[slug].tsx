@@ -44,11 +44,11 @@ export default function Project({
   }
 
   return (
-    <div className="max-w-3xl p-8 mx-auto text-justify">
+    <div className="max-w-5xl p-8 mx-auto text-justify">
       <Head>
         <title>{title}</title>
       </Head>
-      <h1 className="font-display text-6xl pb-2">{title}</h1>
+      <h1 className="text-6xl pb-2">{title}</h1>
       <div className="flex items-center pb-2">
         <h2>{date}</h2>
       </div>

@@ -44,8 +44,8 @@ export default function Projects({ projects }: IProjectProps) {
       <Head>
         <title>Projects - Jack Burgess</title>
       </Head>
-      <h1 className="font-display text-7xl gradientText pb-2">My Projects</h1>
-      <div className="grid grid-cols-2 py-4 gap-4">
+      <h1 className="text-7xl font-extrabold pb-2">My Projects</h1>
+      <div className="grid grid-cols-2 py-4 gap-8 m-4">
         {projects.map((project) => (
           <Link
             key={project.slug}
@@ -53,8 +53,8 @@ export default function Projects({ projects }: IProjectProps) {
             as={`/projects/${project.slug}`}
             legacyBehavior
           >
-            <a className="items-center flex flex-col transition-all">
-              <h1 className=" md:text-4xl w-full bg-gray-300 dark:bg-gray-700 text-center title items rounded-t-lg duration-1000 flex flex-wrap flex-col">
+            <a className="items-center flex flex-col transition-all hover:underline">
+              <h1 className=" md:text-4xl w-full bg-gray-300 dark:bg-gray-700 text-center items rounded-t-lg duration-1000 flex flex-wrap flex-col">
                 {project.data.title}
                 <img
                   className="h-60 rounded-t-xl border-2 object-cover"

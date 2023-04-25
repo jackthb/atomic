@@ -6,9 +6,8 @@ module.exports = {
   content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   theme: {
     fontFamily: {
-      display: ["Libre Baskerville, serif"],
-      sans: ["Nunito", "sans-serif"],
-      mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+      heading: ["var(--font-made-dillan)"],
+      subheading: ["var(--font-space-text)"],
     },
     extend: {
       height: {
