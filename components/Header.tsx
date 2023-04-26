@@ -2,8 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FaHamburger, FaMoon } from "react-icons/fa";
-import Menu from "react-burger-menu/lib/menus/slide";
+import { FaMoon } from "react-icons/fa";
+import { slide as Menu } from "react-burger-menu";
+import React from "react";
 
 export default function Header() {
   const router = useRouter();
