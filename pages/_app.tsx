@@ -7,6 +7,7 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -17,6 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class">
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </ThemeProvider>
   );
