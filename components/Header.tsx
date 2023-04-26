@@ -112,7 +112,6 @@ export default function Header() {
               height: "100%",
               top: "0px",
               right: "0px",
-              zIndex: "9999",
             },
           }}
         >

@@ -40,9 +40,9 @@ export default function Blog({ posts }: IPostProps) {
   return (
     <div className="p-5 max-w-5xl w-full mx-auto">
       <Head>
-        <title>Projects - Jack Burgess</title>
+        <title>Blog - Jack Burgess</title>
       </Head>
-      <h1 className="text-7xl font-extrabold pb-3 w-full">Blog</h1>
+      <h1 className="text-5xl font-extrabold pb-8 w-full">Blog</h1>
       {posts.map((post) => (
         <Link
           key={post.slug}
@@ -50,7 +50,7 @@ export default function Blog({ posts }: IPostProps) {
           as={`/blog/${post.slug}`}
           legacyBehavior
         >
-          <a className="w-full hover:underline dark:hover:bg-slate-700 rounded flex items-center justify-between border-b-2 p-4 pb-2 border-black">
+          <a className="w-full hover:underline rounded flex items-center justify-between border-b-2 border-t-2 p-4 pb-2 border-black dark:border-white">
             <h1 className="text-2xl">{post.data.title}</h1>
             <p>{post.data.date}</p>
           </a>

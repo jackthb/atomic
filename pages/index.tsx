@@ -15,7 +15,7 @@ function RightArrow() {
 
 function Links() {
   return (
-    <div className="flex gap-4 my-4">
+    <div className="flex gap-4 my-8">
       <a
         href="https://www.linkedin.com/in/jackcburgess/"
         aria-label="Linkedin link"
@@ -35,7 +35,7 @@ function Links() {
 export default function Home() {
   return (
     <>
-      <div className="max-w-5xl mx-auto grid place-items-center h-[calc(100%-300px)]">
+      <div className="max-w-5xl mx-auto grid place-items-center h-screen">
         <Head>
           <title>Jack Burgess</title>
         </Head>
@@ -46,7 +46,7 @@ export default function Home() {
           <div>
             <p className="sm:text-3xl text-xl font-mono">
               <RightArrow />
-              keyboard enthusiast + productivity nerd
+              used to have something else here but I think it's cringe
             </p>
             <p className="h-10 sm:text-3xl text-xl font-mono">
               <RightArrow />
