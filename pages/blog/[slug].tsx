@@ -45,11 +45,11 @@ export default function Post({
   }
 
   return (
-    <div className="max-w-3xl p-8 mx-auto text-justify">
+    <div className="max-w-5xl p-8 mx-auto text-justify">
       <Head>
         <title>{title}</title>
       </Head>
-      <h1 className="font-display text-5xl pb-2 text-left">{title}</h1>
+      <h1 className="text-5xl pb-2 text-left">{title}</h1>
       <div className="flex items-center pb-2">
         <h2>{date}</h2>
       </div>

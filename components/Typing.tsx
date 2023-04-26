@@ -1,18 +1,20 @@
 import Typed from "typed.js";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export default function Typing({ text }: { text: string }) {
-  const [isCompMounted, setCompMonuted] = useState(false);
+  const el = React.useRef(null);
 
-  useEffect(() => setCompMonuted(true), []);
-  if (isCompMounted) {
-    var options = {
+  useEffect(() => {
+    if (el.current == null) return;
+    const typed = new Typed(el.current, {
       strings: [text],
       typeSpeed: 80,
       cursorChar: "_",
+    });
+    return () => {
+      typed.destroy();
     };
-    var typed = new Typed(".element", options);
-  }
-  return <span className="element"></span>;
+  }, []);
+  return <span ref={el} className="element"></span>;
 }
