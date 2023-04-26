@@ -1,6 +1,7 @@
 ---
 title: "auth0-todo"
 date: "March 15, 2021"
+end_date: "March 15, 2021"
 excerpt: "Minimal To-do app using Auth0"
 cover_image: "https://res.cloudinary.com/du2zxsy39/image/upload/v1615775782/portfolio/UT6fAOw_bzjrnr.png"
 ---

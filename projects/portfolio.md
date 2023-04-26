@@ -1,6 +1,7 @@
 ---
 title: "Atomic"
 date: "on going"
+end_date: "March 15, 3000"
 excerpt: "Personal portfolio built using Next.js, Tailwind CSS"
 cover_image: "https://res.cloudinary.com/du2zxsy39/image/upload/v1613949426/portfolio/7INoMac_se5dsz.png"
 ---
