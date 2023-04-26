@@ -46,7 +46,7 @@ export default function Home() {
           <div>
             <p className="sm:text-3xl text-xl font-mono">
               <RightArrow />
-              used to have something else here but I think it's cringe
+              used to have something else here but now I think it's cringe
             </p>
             <p className="h-10 sm:text-3xl text-xl font-mono">
               <RightArrow />

@@ -50,7 +50,7 @@ export default function Blog({ posts }: IPostProps) {
           as={`/blog/${post.slug}`}
           legacyBehavior
         >
-          <a className="w-full hover:underline rounded flex items-center justify-between border-b-2 border-t-2 p-4 pb-2 border-black dark:border-white">
+          <a className="w-full hover:underline rounded flex items-center justify-between border-b-2 border-t-2 p-4 border-black dark:border-white">
             <h1 className="text-2xl">{post.data.title}</h1>
             <p>{post.data.date}</p>
           </a>
