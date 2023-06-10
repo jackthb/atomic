@@ -44,10 +44,6 @@ export default function Home() {
             Hello, I'm Jack Burgess
           </h1>
           <div>
-            <p className="sm:text-3xl text-xl font-mono">
-              <RightArrow />
-              used to have something else here but now I think it's cringe
-            </p>
             <p className="h-10 sm:text-3xl text-xl font-mono">
               <RightArrow />
               <Typing text={"software engineer and CompSci grad"} />
