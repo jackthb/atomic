@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Book, { IBookProps } from "../components/Book";
+import Book, { BookProps } from "../components/Book";
 import { fetchGoodReads } from "./api/book";
 
-export default function About({ book }: { book: IBookProps }) {
+export default function About({ book }: { book: BookProps }) {
   return (
     <div className="">
       <Head>
