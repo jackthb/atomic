@@ -30,32 +30,23 @@ export default function Header() {
           <Link href="/">Jack Burgess</Link>
         </div>
         <nav className="flex align-center ml-auto">
-          <Link href="/about" legacyBehavior>
-            <a
-              className={`${
-                router.pathname.includes("/about") ? "underline" : ""
-              } mr-4 hover:underline`}
-            >
-              About
-            </a>
+          <Link
+            href="/about"
+            className={returnClassName(router.pathname, "/about")}
+          >
+            About
           </Link>
-          <Link href="/projects" legacyBehavior>
-            <a
-              className={`${
-                router.pathname.includes("/projects") ? "underline" : ""
-              } mr-4 hover:underline`}
-            >
-              Projects
-            </a>
+          <Link
+            href="/projects"
+            className={returnClassName(router.pathname, "/projects")}
+          >
+            Projects
           </Link>
-          <Link href="/blog" legacyBehavior>
-            <a
-              className={`${
-                router.pathname.includes("/blog") ? "underline" : ""
-              } mr-4 hover:underline`}
-            >
-              Blog
-            </a>
+          <Link
+            href="/blog"
+            className={returnClassName(router.pathname, "/blog")}
+          >
+            Blog
           </Link>
           <a href="mailto:jack@sien.vision" className="mr-4 hover:underline">
             Contact
@@ -117,42 +108,10 @@ export default function Header() {
           }}
         >
           <ul className="absolute grid w-full px-10 py-16">
-            <li className="border-b border-gray-300 py-5">
-              <Link
-                className="flex w-full font-semibold menu-item"
-                href="/"
-                onClick={() => setMenuOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="border-b border-gray-300 py-5">
-              <Link
-                className="flex w-full font-semibold menu-item"
-                href="/about"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </Link>
-            </li>
-            <li className="border-b border-gray-300 py-5">
-              <Link
-                className="flex w-full font-semibold menu-item"
-                href="/projects"
-                onClick={() => setMenuOpen(false)}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="border-b border-gray-300 py-5">
-              <Link
-                className="flex w-full font-semibold menu-item"
-                href="/blog"
-                onClick={() => setMenuOpen(false)}
-              >
-                Blog
-              </Link>
-            </li>
+            <BurgerItem page="home" onClick={() => setMenuOpen(false)} root />
+            <BurgerItem page="about" onClick={() => setMenuOpen(false)} />
+            <BurgerItem page="projects" onClick={() => setMenuOpen(false)} />
+            <BurgerItem page="blog" onClick={() => setMenuOpen(false)} />
             <li className="border-b border-gray-300 py-5">
               <a
                 href="mailto:jack@sien.vision"
@@ -174,4 +133,36 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+function BurgerItem({
+  page,
+  onClick,
+  root,
+}: {
+  page: string;
+  onClick: () => void;
+  root?: boolean;
+}) {
+  return (
+    <li className="border-b border-gray-300 py-5">
+      <Link
+        className="flex w-full font-semibold menu-item"
+        href={root ? "/" : `/${page}`}
+        onClick={onClick}
+      >
+        {capitalise(page)}
+      </Link>
+    </li>
+  );
+}
+
+function capitalise(string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function returnClassName(pathname: string, includes: string) {
+  return `${
+    pathname.includes(includes) ? "underline" : ""
+  } mr-4 hover:underline`;
 }

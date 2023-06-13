@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const AnyComponent = Component as any;
   // wtf? Type error: 'Component' cannot be used as a JSX component.
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider>
       <Layout>
         <AnyComponent {...pageProps} />
         <Analytics />
