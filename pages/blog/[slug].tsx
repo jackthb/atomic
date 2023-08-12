@@ -6,24 +6,21 @@ import fs from "fs";
 import path from "path";
 
 import markdownToHtml from "../../utils/markdownToHtml";
+import { getPost, getPostPaths } from "../../sanity/sanity.query";
+
+import { PortableText } from "@portabletext/react";
 
 export async function getStaticProps({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("./blog", slug + ".md"),
-    "utf8"
-  );
 
-  const { data: frontmatter, content } = matter(markdownWithMeta);
+  const post = await getPost(slug)
 
-  const post = await markdownToHtml(content);
 
   return {
     props: {
-      frontmatter,
       slug,
       post,
     },
@@ -31,15 +28,8 @@ export async function getStaticProps({
 }
 
 export default function Post({
-  frontmatter: { title, date },
   post,
-}: {
-  frontmatter: {
-    title: string;
-    date: string;
-  };
-  post: string;
-}) {
+}: any) {
   if (!post) {
     return <DefaultErrorPage statusCode={404} />;
   }
@@ -47,33 +37,22 @@ export default function Post({
   return (
     <div className="max-w-5xl p-8 mx-auto text-justify">
       <Head>
-        <title>{title}</title>
+        <title>{post.title}</title>
       </Head>
-      <h1 className="text-5xl pb-2 text-left">{title}</h1>
+      <h1 className="text-5xl pb-2 text-left">{post.title}</h1>
       <div className="flex items-center pb-2">
-        <h2>{date}</h2>
+        <h2>{post.publishedAt}</h2>
       </div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: post,
-        }}
-        className="prose prose-sm md:prose-lg lg:prose-xl dark:prose-invert"
-      ></div>
+      <PortableText value={post.body} />
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("./blog"));
-
-  const paths = files.map((file) => ({
-    params: {
-      slug: file.replace(".md", ""),
-    },
-  }));
+  const paths = await getPostPaths()
 
   return {
-    paths: paths,
+    paths,
     fallback: false,
   };
 }
