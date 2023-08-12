@@ -5,20 +5,19 @@ import { fetchGoodReads } from "./api/book";
 
 export default function About({ book }: { book: BookProps }) {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>About - Jack Burgess</title>
       </Head>
       <article className="max-w-5xl mx-auto p-5 mb-5 text-2xl">
         <h1 className="text-5xl pb-9 text-center font-extrabold">About me</h1>
         <p className="pb-9">
-          I'm a London-based software developer, currently working full-time
-          helping candidates find fulfilment at{" "}
+          I'm a London-based software engineer, currently working full-time at{" "}
           <a
-            className="transition duration-300 hover:text-yellow-500"
-            href="https://www.otta.com"
+            className="transition duration-300 hover:text-purple-500"
+            href="https://www.ashbyhq.com"
           >
-            Otta.com
+            Ashby
           </a>
           . I graduated with a First Class in Computer Science at Queen Mary
           University of London. I spend most of my free time working on{" "}
