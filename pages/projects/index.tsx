@@ -1,33 +1,18 @@
 import Link from "next/link";
 import Head from "next/head";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
 import React from "react";
+import { fetchMdx } from "../../lib/helper";
 
+// Updated getStaticProps to use fetchPosts with a path
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("./projects"));
-
-  const projects = files.map((file) => {
-    const slug = file.replace(".md", "");
-    const markdownWithMeta = fs.readFileSync(
-      path.join("./projects", file),
-      "utf8"
-    );
-
-    const { data } = matter(markdownWithMeta);
-    return {
-      slug,
-      data,
-    };
-  });
-
+  const projects = await fetchMdx("./projects");
   return {
     props: {
       projects,
     },
   };
 }
+
 interface ProjectProps {
   projects: {
     slug: string;
@@ -36,6 +21,7 @@ interface ProjectProps {
       date: string;
       end_date: string;
       cover_image: string;
+      hidden?: boolean;
     };
   }[];
 }
@@ -49,6 +35,7 @@ export default function Projects({ projects }: ProjectProps) {
       <h1 className="text-5xl font-extrabold pb-8">Projects</h1>
       <div className="grid grid-cols-2 gap-8">
         {projects
+          .filter((project) => !project.data.hidden)
           .sort((a, b) => {
             return (
               new Date(b.data.end_date).getTime() -

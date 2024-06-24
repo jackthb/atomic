@@ -5,15 +5,20 @@ import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { slide as Menu } from "react-burger-menu";
 import React from "react";
+import { fetchMdx } from "../lib/helper";
 
 export default function Header() {
   const router = useRouter();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [blogPosts, setBlogPosts] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+
+
+
     return () => setMounted(false);
   }, []);
 
@@ -42,13 +47,16 @@ export default function Header() {
           >
             Projects
           </Link>
+          {/*
+          It's not ripe yet
+
           <Link
             href="/blog"
             className={returnClassName(router.pathname, "/blog")}
           >
             Blog
-          </Link>
-          <a href="mailto:jack@sien.vision" className="mr-4 hover:underline">
+          </Link> */}
+          <a href="mailto:hi@jackburgess.co.uk" className="mr-4 hover:underline">
             Contact
           </a>
           <button

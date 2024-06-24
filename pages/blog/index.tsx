@@ -1,23 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
+import { fetchMdx } from "../../lib/helper";
+
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("./blog"));
-
-  const posts = files.map((file) => {
-    const slug = file.replace(".md", "");
-    const markdownWithMeta = fs.readFileSync(path.join("./blog", file), "utf8");
-
-    const { data } = matter(markdownWithMeta);
-    return {
-      slug,
-      data,
-    };
-  });
-
+  const posts = await fetchMdx("./blog");
   return {
     props: {
       posts,

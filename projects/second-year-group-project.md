@@ -4,6 +4,7 @@ date: "April 1, 2020 -> May 31, 2020"
 end_date: "May 31, 2020"
 excerpt: "Second year group project"
 cover_image: "https://i.imgur.com/pTaMzmR.png"
+hidden: true
 ---
 
 ## Griffon

@@ -1,11 +1,14 @@
 ---
-title: "First Post"
-date: "19/12/2021"
+title: "Sleep deprived ramblings"
+date: "19/04/2023"
 excerpt: "Personal portfolio built using Next.js, Tailwind CSS"
+song_link: "https://open.spotify.com/track/52eIcoLUM25zbQupAZYoFh?si=0427fcac8f8e4196"
+hidden: true
 ---
 
-# Hey!
+To be honest, I'd be flying carry-on only too, if I didn't have so many liquids.
 
-This is my first test blog post. It will not have any content. I'm just here to say hello.
+I don't think that's justification to be so prickly with the flight attendants though.
 
-Hello.
+Context:
+I was at ATL waiting for an already delayed flight back to London and a flight attendant was asking people with large carry-on luggage to move it into the hold so they had more room.

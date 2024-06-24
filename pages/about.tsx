@@ -3,7 +3,7 @@ import Head from "next/head";
 import Book, { BookProps } from "../components/Book";
 import { fetchGoodReads } from "./api/book";
 
-export default function About({ book }: { book: BookProps }) {
+export default function About({ books }: { books: BookProps[] }) {
   return (
     <div>
       <Head>
@@ -20,14 +20,7 @@ export default function About({ book }: { book: BookProps }) {
             Ashby
           </a>
           . I graduated with a First Class in Computer Science at Queen Mary
-          University of London. I spend most of my free time working on{" "}
-          <a
-            className="bg-clip-text hover:text-transparent bg-gradient-to-r from-blue-300 to-blue-600 transition duration-300"
-            href="https://www.sien.vision"
-          >
-            sien.vision
-          </a>
-          .
+          University of London.
         </p>
         <p>
           You can see what I'm currently reading below -{" "}
@@ -38,22 +31,22 @@ export default function About({ book }: { book: BookProps }) {
             feel free to send me any recommendations!
           </a>
         </p>
+      <aside className="flex gap-4 flex-col justify-stretch pt-16">
+        {books.map((book) => (
+          <Book book={book} />
+        ))}
+      </aside>
       </article>
-      <Book book={book} />
     </div>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { title, author, image } = await fetchGoodReads();
+  const books = await fetchGoodReads();
 
   return {
     props: {
-      book: {
-        title,
-        author,
-        image,
-      },
+      books
     },
     revalidate: 120,
   };

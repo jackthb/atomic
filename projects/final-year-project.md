@@ -4,6 +4,8 @@ date: "September 1, 2020 -> May 7, 2021"
 end_date: "May 7, 2021"
 excerpt: "Final year project using Twitter and Google Cloud Natural Language API"
 cover_image: "https://res.cloudinary.com/du2zxsy39/image/upload/v1639924677/sentry/searchq_jkvk0t.png"
+hidden: true
+
 ---
 
 ## What is sentry/sa-for-twitter?

@@ -39,6 +39,7 @@ export default function Project({
   };
   project: string;
 }) {
+
   if (!project) {
     return <DefaultErrorPage statusCode={404} />;
   }
@@ -77,3 +78,13 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+
+type ProjectType = {
+  title: string;
+  date: string;
+  end_date: string;
+  excerpt: string;
+  cover_image: string;
+  hidden?: boolean;
+};
