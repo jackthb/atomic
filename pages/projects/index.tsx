@@ -3,7 +3,6 @@ import Head from "next/head";
 import React from "react";
 import { fetchMdx } from "../../lib/helper";
 
-// Updated getStaticProps to use fetchPosts with a path
 export async function getStaticProps() {
   const projects = await fetchMdx("./projects");
   return {

@@ -16,12 +16,12 @@ function RightArrow() {
 function Links() {
   return (
     <div className="flex gap-4 my-8">
-      <a
+      {/* <a
         href="https://www.linkedin.com/in/jackcburgess/"
         aria-label="Linkedin link"
       >
         <FaLinkedinIn className="text-3xl hover:text-blue-600 transition duration-300" />
-      </a>
+      </a> */}
       <a href="https://github.com/jackthb" aria-label="Github link">
         <FaGithub className="text-3xl hover:text-gray-500 transition duration-300" />
       </a>
