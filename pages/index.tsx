@@ -46,7 +46,7 @@ export default function Home() {
           <div>
             <p className="h-10 sm:text-3xl text-xl font-mono">
               <RightArrow />
-              <Typing text={"software engineer that doesn't know what else to write here"} />
+              <Typing text={"software engineer"} />
             </p>
             <Links />
           </div>
